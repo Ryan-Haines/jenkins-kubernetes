@@ -3,7 +3,13 @@ jenkinsconfig for kuberenetes deployment
 
 after configuring microk8s for raspberry pi, to start a jenkins container:
 
-kubectl apply -f on each .yaml files
+kubectl apply -f on each .yaml files in the following order:
+
+```
+kubectl apply -f jenkins-volume.yaml &&
+kubectl apply -f jenkins-deployment.yaml &&
+kubectl apply -f jenkins-service.yaml
+```
 
 Get the NodePort assigned to the service:
 
