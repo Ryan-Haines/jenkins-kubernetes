@@ -23,3 +23,11 @@ jenkins-service   NodePort   10.108.144.78   <none>        8080:31813/TCP   1m
 ```
 
 You can now access Jenkins at http://<Node-IP>:<NodePort>, where <Node-IP> is the IP address of any node in your cluster and <NodePort> is the port number assigned to the service (in this example, 31813).
+
+Get the password by executing against the jenkins process
+
+`kubectl get pods` to get the name of the jenkins-xxxx instance then 
+```
+kubectl exec -it jenkins-xxxx -- cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
