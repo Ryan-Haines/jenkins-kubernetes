@@ -27,6 +27,7 @@ You can now access Jenkins at http://<Node-IP>:<NodePort>, where <Node-IP> is th
 Get the password by executing against the jenkins process
 
 `kubectl get pods` to get the name of the jenkins-xxxx instance then 
+
 ```
 kubectl exec -it jenkins-xxxx -- cat /var/jenkins_home/secrets/initialAdminPassword
 ```
@@ -36,3 +37,5 @@ save the password and install suggested plugins
 skip user creation
 
 Start!
+
+settings -> configure -> ssh public keys result of `cat ~/.ssh/id_rsa.pub`
