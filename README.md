@@ -31,3 +31,8 @@ Get the password by executing against the jenkins process
 kubectl exec -it jenkins-xxxx -- cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
+save the password and install suggested plugins
+
+skip user creation
+
+Start!
